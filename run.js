@@ -35,6 +35,6 @@ function start(expressao, filepath) {
 }
 
 if (process.argv.length >= 3)
-    start("---expressao---", process.argv[2]);
+    start("\\displaystyle\\sum_{x = 0}^{ \\infty } \\int _{0}^{1}\\frac{x+2}{ \\cos (x)}\\,\\mathrm{d}x", process.argv[2]);
 else
-    start("\\begin{bmatrix}1 & 2 & 3\\\\4 & 5 & 6\\\\7 & 8 & 9\\\\\\end{bmatrix}");
+    start("\\displaystyle\\sum_{x = 0}^{ \\infty } \\int _{0}^{1}\\frac{x+2}{ \\cos (x)}\\,\\mathrm{d}x");
