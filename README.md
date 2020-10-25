@@ -95,6 +95,7 @@ A linguagem apresentada pelo nosso projeto é a seguinte:
   Para criar uma integral trila definida entre 0 e 1, 0 e 10, e 0 e 5 de uma expressão - integral([0, 1], [0, 10], [0, 5], x + y + z, dx, dy, dz) ou integral_tripla([0, 1], [0, 10], [0, 5], x + y + z, dx, dy, dz)
   Para criar uma integral de linha indefinida - integral_linha(x + 2, dx)
   Para criar uma integral de linha definida entre 0 e 10 - integral_linha([0, 10], x + 2, dx)
+  Para criar um limite de integração entre 0 e 3 - limite_integracao(fracao(x^2 + 3x, 2), [0, 3])
   Para declarar uma variável - $nome$ = {B + C}
   Para utilizar a variável em uma expressão - A = $nome$
 ```
@@ -123,6 +124,7 @@ _Para visualização da definição da linguagem basta acessar o arquivo [Math.g
 ![Exemplo Integral Tripla Definida Opcao-2](imagens/integral-tripla-definida-opcao-2.png)
 ![Exemplo Integral de Linha Indefinida](imagens/integral-linha-indefinida.png)
 ![Exemplo Integral de Linha Definida](imagens/integral-linha-intervalo.png)
+![Exemplo Limite Integracao](imagens/exemplo-limite-integracao.png)
 ![Exemplo Variavel](imagens/exemplo-variavel.png)
 
 <!-- O QUE FOI IMPLEMENTADO -->
