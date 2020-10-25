@@ -103,6 +103,10 @@ A linguagem apresentada pelo nosso projeto é a seguinte:
 ## Exemplos de expressões geradas
 
 ![Exemplo Matriz](imagens/exemplo-matriz.png)
+![Exemplo Fracao](imagens/exemplo-fracao.png)
+![Exemplo Raiz](imagens/exemplo-raiz.png)
+![Exemplo Chaves](imagens/exemplo-chaves.png)
+![Exemplo Binomial](imagens/exemplo-binomial.png)
 
 
 <!-- O QUE FOI IMPLEMENTADO -->
