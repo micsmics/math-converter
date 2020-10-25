@@ -182,13 +182,67 @@ A análise léxica implementada no projeto é capaz de identificar os seguintes 
    Temos o seguinte resultado no arquivo de saída:
    ```sh
    Linha 1: limitador de conteudo da variável não fechado
-  Fim da compilacao
+   Fim da compilacao
    ```
 
 <!-- ANALISADOR SINTATICO -->
+### Analisador Sintático
 
+A análise sintática implementada no projeto é capaz de identificar os erros que não estão conforme a definição da linguagem. Para ver como a linguagem foi definida basta acessar o arquivo [Math.g4](/src/Math.g4).
+
+Podemos visualizar alguns exemplos de erros sintáticos apontados pela implementação do projeto:
 <!-- EXEMPLOS ANALISADOR SINTATICO -->
-
+  * Uma matriz deve ter ao menos a entrada de uma linha. Para o seguinte caso:
+    ```sh
+    matriz()
+    ```
+    Temos o seguinte erro sintático:
+    ```sh
+    Linha 1: erro sintatico proximo a )
+    ```
+    
+  * A linha da matriz deve estar entre \[ \]. Para o seguinte caso:
+    ```sh
+    matriz([1, 2, 3)
+    ```
+    
+    Temos o seguinte erro sintático:
+    ```sh
+    Linha 1: erro sintatico proximo a EOF
+    ```
+    
+  * Um limite de integração deve ter uma expressão e um intervalo. Para o seguinte caso:
+    ```sh
+    limite_integracao(a + b)
+    ```
+    
+    Temos o seguinte erro sintático:
+    ```sh
+    Linha 1: erro sintatico proximo a EOF
+    ```
+  
+  * O intervalo de uma integral deve ter duas expressões separadas por ",". Para o seguinte caso:
+    ```sh
+    integral([1, ], x^3 + 2x, dx)
+    ```
+    
+    Temos o seguinte erro sintático:
+    ```sh
+    Linha 1: erro sintatico proximo a ]
+    ```
+  
+  * Uma fração é composta de duas expressões, numerador e denominador. Para o seguinte caso:
+    ```sh
+    fracao(x^2 + 9)
+    ```
+    
+    Temos o seguinte erro sintático:
+    ```sh
+    Linha 1: erro sintatico proximo a EOF
+    ```
+  
+  _Esses foram apenas alguns exemplos que violam a definição da linguagem. Podem ser gerados muitos outros apenas olhando as definições propostas no arquivo [Math.g4](/src/Math.g4) e produzindo alguns "equívocos" para teste._
+    
 <!-- ANALISADOR SEMANTICO -->
 
 <!-- EXEMPLOS ANALISADOR SEMANTICO -->
