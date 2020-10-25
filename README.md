@@ -107,7 +107,21 @@ A linguagem apresentada pelo nosso projeto é a seguinte:
 ![Exemplo Raiz](imagens/exemplo-raiz.png)
 ![Exemplo Chaves](imagens/exemplo-chaves.png)
 ![Exemplo Binomial](imagens/exemplo-binomial.png)
-
+![Exemplo Somatorio](imagens/exemplo-somatorio.png)
+![Exemplo Limite](imagens/exemplo-limite.png)
+![Exemplo Integral](imagens/exemplo-integral.png)
+![Exemplo Integral Dupla Indefinida](imagens/integral-dupla-indefinida.png)
+![Exemplo Integral Dupla Indefinida Opcao-2](imagens/integral-dupla-indefinida-opcao-2.png)
+![Exemplo Integral Tripla Indefinida](imagens/integral-tripla-indefinida.png)
+![Exemplo Integral Tripla Indefinida Opcao-2](imagens/integral-tripla-indefinida-opcao-2.png)
+![Exemplo Integral Definida](imagens/integral-definida.png)
+![Exemplo Integral Dupla Definida](imagens/integral-dupla-definida.png)
+![Exemplo Integral Dupla Definida Opcao-2](imagens/integral-dupla-definida-opcao-2.png)
+![Exemplo Integral Tripla Definida](imagens/integral-tripla-definida.png)
+![Exemplo Integral Tripla Definida Opcao-2](imagens/integral-tripla-definida-opcao-2.png)
+![Exemplo Integral de Linha Indefinida](imagens/integral-linha-indefinida.png)
+![Exemplo Integral de Linha Definida](imagens/integral-linha-intervalo.png)
+![Exemplo Variavel](imagens/exemplo-variavel.png)
 
 <!-- O QUE FOI IMPLEMENTADO -->
 
