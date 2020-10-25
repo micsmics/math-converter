@@ -1,0 +1,3 @@
+$a$ = {integral([0, 1], fracao(x + 2, cos(x)), dx)}
+
+somatorio(x = 0, infinito, $a$)
