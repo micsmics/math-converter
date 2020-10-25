@@ -331,4 +331,4 @@ Podemos visualizar alguns exemplos de erros sintáticos apontados pela implement
 <!-- GERADOR DA EXPRESSAO EM LaTeX -->
 ### Gerador da Expressão em LaTeX
 
-Foi implementado o gerador de expressão LaTeX. Alguns exemplos de expressões geradas podem ser visualizadas em [Exemplos de Expressões Geradas](). Após transformar a expressão em LaTex, é gerado um arquivo de saída com a expressão em LaTex e um arquivo run.js. Que ao ser executado gera uma imagem da expressão em .png e .svg.
+Foi implementado o gerador de expressão LaTeX. Alguns exemplos de expressões geradas podem ser visualizadas em [Exemplos de Expressões Geradas](#exemplos-de-expressões-geradas). Após transformar a expressão em LaTex, é gerado um arquivo de saída com a expressão em LaTex e um arquivo run.js. Que ao ser executado gera uma imagem da expressão em .png e .svg.
