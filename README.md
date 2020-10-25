@@ -176,7 +176,7 @@ A análise léxica implementada no projeto é capaz de identificar os seguintes 
   ```
   
 * **Erro na declaração de uma variável:**
-   É sinalizado um erro quando o sinalizador de fim de conteúdo de uma variável não é aplicado, ou seja, o conteúdo de uma variável não foi fechad. A declaração de uma variável deve ser feita no seguinte formato: _$nome-variavel$ = {conteudo-variavel}_
+   É sinalizado um erro quando o sinalizador de fim de conteúdo de uma variável não é aplicado, ou seja, o conteúdo de uma variável não foi fechado. A declaração de uma variável deve ser feita no seguinte formato: _$nome-variavel$ = {conteudo-variavel}_
    ```sh
    ERRO_CONTEUDO_VARIAVEL: ('{' ~('}')* EOF);
    ```
