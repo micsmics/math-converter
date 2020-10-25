@@ -244,7 +244,75 @@ Podemos visualizar alguns exemplos de erros sintáticos apontados pela implement
   _Esses foram apenas alguns exemplos que violam a definição da linguagem. Podem ser gerados muitos outros apenas olhando as definições propostas no arquivo [Math.g4](/src/Math.g4) e produzindo alguns "equívocos" para teste._
     
 <!-- ANALISADOR SEMANTICO -->
-
-<!-- EXEMPLOS ANALISADOR SEMANTICO -->
+  ### Analisador Semântico
+  
+  A análise semântica implementada no projeto é capaz de identificar os seguintes erros:
+  * **Usar uma variável que ainda não foi declarada:**
+    Para o seguinte caso:
+      ```sh
+      integral([1, 2], $a$, dx)
+      ```
+    
+    Temos o seguinte erro semântico:
+      ```sh
+      Linha 1: variavel $a$ nao declarada antes do uso
+      Fim da compilacao
+      ```
+  * **Definir uma matriz em que nem todas as linhas possuem o mesmo número de colunas:**
+    Para o seguinte caso:
+      ```sh
+      matriz([1, 2, 3], [1, 2], [1, 2, 3])
+      ```
+    
+    Temos o seguinte erro semântico:
+      ```sh
+      Linha 1: O número de colunas da matriz deve ser o mesmo para todas as linhas
+      Fim da compilacao
+      ```
+  * **Definir uma expressão Binomial com um número de termos diferente de 2:**
+    Para o seguinte caso:
+      ```sh
+      binomial(x)
+      ```
+    
+    Temos o seguinte erro semântico:
+      ```sh
+      Linha 1: uma expressao binomial deve ter obrigatoriamente dois termos
+      Fim da compilacao
+      ```    
+  * **Em uma integral o número de variáveis de integração deve ser igual ao número de intervalos de integração:**
+    Para o seguinte caso:
+      ```sh
+      integral([0, 1], [0, 5], [0, 10], x + y + z, dx, dy)
+      ```
+    
+    Temos o seguinte erro semântico:
+      ```sh
+      Linha 1: A quantidade de intervalos na integral e variáveis de integração deve ser a mesma
+      Fim da compilacao
+      ```    
+  * **Uma integral dupla deve ter (se for definida) dois intervalos de integração, e sempre deve ter duas variáveis de integração:**
+    Para o seguinte caso:
+      ```sh
+      integral_dupla([0, 1], [0, 5], [0, 10], x + y, dx, dy)
+      ```
+    
+    Temos o seguinte erro semântico:
+      ```sh
+      Linha 1: A quantidade de intervalos na integral dupla deve ser 0 (no caso de uma integral indefinida) ou dois intervalos
+      Fim da compilacao
+      ```    
+      
+  * **Uma integral tripla deve ter (se for definida) três intervalos de integração, e sempre deve ter três variáveis de integração:**
+    Para o seguinte caso:
+      ```sh
+      integral_tripla(x + y, dx, dy)
+      ```
+    
+    Temos o seguinte erro semântico:
+      ```sh
+      Linha 1: São necessárias três variáveis de integração na integral tripla
+      Fim da compilacao
+      ```    
 
 <!-- GERADOR DA EXPRESSAO EM LaTeX -->
