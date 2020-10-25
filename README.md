@@ -2,7 +2,7 @@
 <br />
 <p align="center">
   <a>
-    <img src="/imagens/logo.png" alt="Logo" width="600" height="300">
+    <img src="/imagens/logo.png" alt="Logo" width="300" height="150">
   </a>
 
   <h3 align="center">Math-Converter</h3>
