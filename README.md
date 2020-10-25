@@ -99,6 +99,8 @@ A linguagem apresentada pelo nosso projeto é a seguinte:
   Para utilizar a variável em uma expressão - A = $nome$
 ```
 
+_Para visualização da definição da linguagem basta acessar o arquivo [Math.g4](/src/Math.g4)_
+
 <!-- EXEMPLOS DE EXPRESSOES GERADAS -->
 ## Exemplos de expressões geradas
 
@@ -124,10 +126,64 @@ A linguagem apresentada pelo nosso projeto é a seguinte:
 ![Exemplo Variavel](imagens/exemplo-variavel.png)
 
 <!-- O QUE FOI IMPLEMENTADO -->
+## O que foi implementado no projeto?
+
+Agora vamos apresentar as funcionalidades contidas no projeto como forma de aplicação dos conceitos aprendidos na disciplina de Construção de Compiladores 1.
 
 <!-- ANALISADOR LEXICO -->
+### Analisador Léxico
 
-<!-- EXEMPLOS ANALISADOR LEXICO -->
+A análise léxica implementada no projeto é capaz de identificar os seguintes erros:
+* **Erro de variável não fechada:**
+  É sinalizado um erro quando a chamada de uma variável que deve estar no formato '$nome-variavel$' não é fechada até o pulo de linha ou até o final do arquivo:
+  ```sh
+  ERRO_VARIAVEL: ('$' ~('$')* ('\n' | EOF));
+  ```
+  
+  Para uma expressão definida da seguinte forma:
+  ```sh
+  $a = {integral([1, 5], x^3 + 2, dx)}
+  ```
+  
+  Temos o seguinte resultado no arquivo de saída:
+  ```sh
+  Linha 1: variável nao fechada
+  Fim da compilacao
+  ```
+  
+* **Erro para o nome da variável:**
+  É sinalizado um erro quando o nome de uma variável não tem apenas caracteres [a-z] | [A-Z] | [0-9].
+  ```sh
+  ERRO_NOME_VARIAVEL: '$' ( ([a-zA-Z0-9]) | (~([a-zA-Z0-9] | '$')) )* '$';
+  ```
+  
+  Para uma expressão definida da seguinte forma:
+  ```sh
+  $a2B_$ = {integral([1, 5], x^3 + 2, dx)}
+  ```
+  
+  Temos o seguinte resultado no arquivo de saída:
+  ```sh
+  Linha 1: caractere inválido no nome da variável
+  Fim da compilacao
+  ```
+  
+* **Erro na declaração de uma variável:**
+   É sinalizado um erro quando o sinalizador de fim de conteúdo de uma variável não é aplicado, ou seja, o conteúdo de uma variável não foi fechad. A declaração de uma variável deve ser feita no seguinte formato: _$nome-variavel$ = {conteudo-variavel}_
+   ```sh
+   ERRO_CONTEUDO_VARIAVEL: ('{' ~('}')* EOF);
+   ```
+   
+   Para uma expresão definida da seguinte forma:
+   ```sh
+   $a$ = {integral([1, 5], x^3 + 2, dx)
+   ```
+   
+   Temos o seguinte resultado no arquivo de saída:
+   ```sh
+   Linha 1: limitador de conteudo da variável não fechado
+  Fim da compilacao
+   ```
 
 <!-- ANALISADOR SINTATICO -->
 
