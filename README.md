@@ -248,6 +248,7 @@ Podemos visualizar alguns exemplos de erros sintáticos apontados pela implement
   
   A análise semântica implementada no projeto é capaz de identificar os seguintes erros:
   * **Usar uma variável que ainda não foi declarada:**
+  
     Para o seguinte caso:
       ```sh
       integral([1, 2], $a$, dx)
@@ -259,6 +260,7 @@ Podemos visualizar alguns exemplos de erros sintáticos apontados pela implement
       Fim da compilacao
       ```
   * **Definir uma matriz em que nem todas as linhas possuem o mesmo número de colunas:**
+  
     Para o seguinte caso:
       ```sh
       matriz([1, 2, 3], [1, 2], [1, 2, 3])
@@ -270,6 +272,7 @@ Podemos visualizar alguns exemplos de erros sintáticos apontados pela implement
       Fim da compilacao
       ```
   * **Definir uma expressão Binomial com um número de termos diferente de 2:**
+  
     Para o seguinte caso:
       ```sh
       binomial(x)
@@ -281,6 +284,7 @@ Podemos visualizar alguns exemplos de erros sintáticos apontados pela implement
       Fim da compilacao
       ```    
   * **Em uma integral o número de variáveis de integração deve ser igual ao número de intervalos de integração:**
+  
     Para o seguinte caso:
       ```sh
       integral([0, 1], [0, 5], [0, 10], x + y + z, dx, dy)
@@ -292,6 +296,7 @@ Podemos visualizar alguns exemplos de erros sintáticos apontados pela implement
       Fim da compilacao
       ```    
   * **Uma integral dupla deve ter (se for definida) dois intervalos de integração, e sempre deve ter duas variáveis de integração:**
+  
     Para o seguinte caso:
       ```sh
       integral_dupla([0, 1], [0, 5], [0, 10], x + y, dx, dy)
@@ -304,6 +309,7 @@ Podemos visualizar alguns exemplos de erros sintáticos apontados pela implement
       ```    
       
   * **Uma integral tripla deve ter (se for definida) três intervalos de integração, e sempre deve ter três variáveis de integração:**
+  
     Para o seguinte caso:
       ```sh
       integral_tripla(x + y, dx, dy)
@@ -316,3 +322,6 @@ Podemos visualizar alguns exemplos de erros sintáticos apontados pela implement
       ```    
 
 <!-- GERADOR DA EXPRESSAO EM LaTeX -->
+### Gerador da Expressão em LaTeX
+
+Foi implementado o gerador de expressão LaTeX. Alguns exemplos de expressões geradas podem ser visualizadas em [Exemplos de Expressões Geradas](). Após transformar a expressão em LaTex, é gerado um arquivo de saída com a expressão em LaTex e um arquivo run.js. Que ao ser executado gera uma imagem da expressão em .png e .svg.
