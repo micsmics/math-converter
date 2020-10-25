@@ -100,6 +100,10 @@ A linguagem apresentada pelo nosso projeto é a seguinte:
 ```
 
 <!-- EXEMPLOS DE EXPRESSOES GERADAS -->
+## Exemplos de expressões geradas
+
+![Exemplo Matriz](imagens/exemplo-matriz.png)
+
 
 <!-- O QUE FOI IMPLEMENTADO -->
 
