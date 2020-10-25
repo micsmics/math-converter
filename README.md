@@ -52,8 +52,8 @@ Agora é só usar :smile:
 <!-- COMO USAR -->
 ## Como usar
 
-1. Crie um arquivo de texto e digite a expressão matemática de acordo com os exemplos exibidos da linguagem proposta pelo projeto.
-2. Vá até a pasta do projeto
+1. Vá até a pasta do projeto
+2. Edite o arquivo arquivo-de-entrada.txt e digite a expressão matemática de acordo com os exemplos exibidos da linguagem proposta pelo projeto.
 3. Execute o programa com o seguinte comando:
 
 ```sh
@@ -63,7 +63,7 @@ Após a execução do comando acima, serão criados dois arquivos:
   - arquivo de saida, onde contém a expressão convertida para o formato LaTeX
   - programa em Node.js para geração da imagem da expressão com o nome run.js
   
-  _é necessário que todos os arquivos (arquivo-de-entrada.txt e arquivo-de-saida.txt) estejam na mesma pasta do projeto math-converter_
+  _Para uma melhor organização de arquivos, é necessário que todos os arquivos (arquivo-de-entrada.txt e arquivo-de-saida.txt) estejam na mesma pasta do projeto math-converter_
   
  Para gerar a imagem da expressão, basta digitar o seguinte comando:
 ```sh
@@ -73,6 +73,11 @@ node run.js
 Serão gerados dois arquivos:
   - imagem-da-expressao.png
   - imagem-da-expressao.svg
+  
+Você também pode executar tudo de uma só vez entrando com os comandos da seguinte forma:
+```sh
+java -jar compilador/math-converter.jar arquivo-de-entrada.txt arquivo-de-saida.txt ; node run.js
+```
   
 <!-- COMO É A LINGUAGEM -->
 ## Como é a linguagem?
