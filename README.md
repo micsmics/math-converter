@@ -24,6 +24,10 @@
 -->
 
 
+<!-- VIDEO DE APRESENTACAO -->
+## Vídeo de Apresentação
+[![Video de Apresentacao](imagens/thumbnail-video.png)](https://www.youtube.com/watch?v=1ofiSA181Ik)
+
 <!-- PRE-REQUISITOS -->
 ## Pré-requisitos
 
@@ -110,6 +114,7 @@ _Para visualização da definição da linguagem basta acessar o arquivo [Math.g
 <!-- EXEMPLOS DE EXPRESSOES GERADAS -->
 ## Exemplos de expressões geradas
 
+![Descricao Exemplo](imagens/descricao-exemplo.png)
 ![Exemplo Matriz](imagens/exemplo-matriz.png)
 ![Exemplo Fracao](imagens/exemplo-fracao.png)
 ![Exemplo Raiz](imagens/exemplo-raiz.png)
